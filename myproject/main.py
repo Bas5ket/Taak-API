@@ -5,6 +5,13 @@ import database
 import models
 import schemas
 
+if not os.path.exists('.\sqlitedb'):
+    os.makedirs('.\sqlitedb')
+
+#"sqlite:///./sqlitedb/sqlitedata.db"
+models.Base.metadata.create_all(bind=engine)
+
+
 app = FastAPI()
 
 models.Base.metadata.create_all(bind=database.engine)
