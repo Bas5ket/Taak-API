@@ -1,7 +1,7 @@
 version: "3.9"
 services:
  dnd-api-service:
-  image: bas5ket/taak-api
+  image: miverboven/python-db-test
   ports:
     - "8000:8000"
   volumes:
