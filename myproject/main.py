@@ -5,6 +5,7 @@ from database import SessionLocal, engine
 import models
 import schemas
 import os
+import database
 
 if not os.path.exists('.\sqlitedb'):
     os.makedirs('.\sqlitedb')
