@@ -1,9 +1,10 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 import crud
-import database
+from database import SessionLocal, engine
 import models
 import schemas
+import os
 
 if not os.path.exists('.\sqlitedb'):
     os.makedirs('.\sqlitedb')
