@@ -31,6 +31,9 @@ class UserResponse(BaseModel):
     user_name: str
     email: str
 
+    class Config:
+        orm_mode = True
+
 class CharacterResponse(BaseModel):
     id: int
     character_name: str
@@ -39,6 +42,9 @@ class CharacterResponse(BaseModel):
     klas: str
     level: int
     owner_id: int
+
+    class Config:
+        orm_mode = True
 
 class CharacterStatsResponse(BaseModel):
     id: int
@@ -53,6 +59,9 @@ class CharacterStatsResponse(BaseModel):
     initiative: int
     armor_class: int
     character_id: int
+
+    class Config:
+        orm_mode = True
 
 class UserDelete(BaseModel):
     id: int
