@@ -69,6 +69,9 @@ class UserDelete(BaseModel):
     email: str
     password: str
 
+    class Config:
+        orm_mode = True
+
 
 class CharacterDelete(BaseModel):
     id: int
@@ -78,6 +81,9 @@ class CharacterDelete(BaseModel):
     klas: str
     level: int
     owner_id: int
+
+    class Config:
+        orm_mode = True
 
 class CharacterStatsDelete(BaseModel):
     id: int
@@ -92,3 +98,6 @@ class CharacterStatsDelete(BaseModel):
     initiative: int
     armor_class: int
     character_id: int
+
+    class Config:
+        orm_mode = True
